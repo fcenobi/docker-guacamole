@@ -19,7 +19,7 @@ Building
 Build from docker file:
 
 ```
-git clone git@github.com:aptalca/docker-guacamole.git
+git clone https://github.com/fcenobi/docker-guacamole.git
 docker build -t aptalca/guacamole .
 ```
 
