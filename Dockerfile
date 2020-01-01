@@ -12,8 +12,8 @@ MAINTAINER Zuhkov <zuhkov@gmail.com> & aptalca
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
+ENV LANG it_IT.UTF-8
+ENV LANGUAGE it_IT.UTF-8
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
@@ -24,8 +24,8 @@ RUN usermod -u 99 nobody && \
     usermod -d /home nobody && \
     chown -R nobody:users /home
 
-# Disable SSH
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+## Disable SSH
+# RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0xcbcb082a1bb943db && \
     echo "deb http://mariadb.mirror.iweb.com/repo/5.5/ubuntu `lsb_release -cs` main" \
